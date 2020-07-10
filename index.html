@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Product Purchase form</title>
+  <style>
+    body{
+      background-image: url("https://www.raeng.org.uk/RAE/media/General/Education/2018%20Year%20of%20Engineering/yoe-logo-animation.gif") ;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      
+    }
+    header{
+      text-align:center;
+    }
+    #s1{
+      text-align:center;
+    }
+    #s1 >p{
+      color:red;
+    }
+    #input1{
+      margin-left:45px;
+      margin-right:20px;
+    }
+    #input2{
+      margin-left:30px;
+    }
+    #input3{
+      margin-left:24px
+    }
+    #input4{
+      margin-left:60px;
+    }
+    #input5{
+      margin-left:60px;
+    }
+    #input6{
+      margin-left:14px;
+    }
+    select{
+      margin-left:55px;
+      border-color:blue;
+      border-radius:5px;
+    }
+    #s2{
+      text-align:center;
+    }
+    button{
+      color:blue;
+      background-color:skyblue;
+      border-radius:10px;
+    }
+    form{
+      margin-left:50px;
+    }
+  </style>
+  <script>
+    function EmailChecker(){
+      var inputE= document.getElementById("input3").value;
+      var emailSyntax= /^.+@gmail.com$/;
+      if(emailSyntax.test(inputE)){
+      }
+      else{
+        alert("Please Enter valid Email");
+      }
+    }
+      function Phone(){
+        var inp= document.getElementById("input6").value;
+        if(inp.length!= 10){
+          alert("Pleae enter the valid number");
+        }  
+    }
+    
+    
+      
+      
+  </script>
+</head>
+<body>
+    <header>
+      <h1>Welcome!<br>Place your order here:
+        <hr>
+    </header>
+    <main>
+      <section id="s1">
+      <img id ="img1" src="data:image/png;base64,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">
+      <p>Plaese  Enter the following details:<p>  
+      </section>  
+      <form>
+        
+        Full Name: <input id="input1" type="text" placeholder="  First Name" required>  <input id="input2" type="text" placeholder="  Last Name"><br><br>
+        Email address: <input id="input3" placeholder="  xyz@gmail.com"; onblur="EmailChecker()" required><br><br>
+        Address: <input id ="input4" required><br><br>
+        Pincode: <input id ="input5" type="number" required><br><br>
+        Phone Number: <input id="input6" type="number"; onblur="Phone()"; required><br><br>
+        Quantity: 
+        <select>
+          <option> 1 </option>
+          <option> 2 </option>
+          <option> 3 </option>
+          <option> 4 </option>
+          <option> 5</option>
+        </select><br><br>
+        Payment type: <input name="payment" type="radio" checked> Netbanking<br>
+                      <input name="payment" type="radio" style="margin-left:100px"> UPI<br>
+        <input name="payment" type="radio" style="margin-left:100px"> Debit card<br>
+        <input name="payment" type="radio" style="margin-left:100px"> Cash on Delivery<br><br>
+        terms and conditions: <input id="input7" type="checkbox"; value="T"; onblur="term()"; > By clicling this you accepts our terms and conditions<br><br>
+        <section id ="s2">
+        <button>
+          Place my order
+        </button>
+        </section>
+        <p id="p1"></p>
+
+      </form>
+      
+    </main>
+
+</body>
+</html>
